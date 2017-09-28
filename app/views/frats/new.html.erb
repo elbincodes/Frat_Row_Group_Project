@@ -1,0 +1,15 @@
+<h1>LET'S MAKE SOME FRATS</h1>
+
+<% if @frat.errors.any? %>
+  <h2>Errors:</h2>
+    <% @frat.errors.full_messages.each do |error| %>
+    <%= error %><br>
+  <% end %>
+<% end %>
+<br>
+<br>
+<%= form_for @frat do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit "Make a Frat" %>
+<% end %>
